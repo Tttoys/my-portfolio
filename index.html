@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7601af0d41.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UX/UI Designer</p>
+                <h1>Welcome to my world.<br> I'm Sitthipun<br>Computer Engineering <br> Student in KMUTT</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/about.png" alt="About Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Sitthipun, you can call me Toy. I'm 19 years old and currently studying computer engineering at King Mongkut's University of Technology in Thonburi. My dream is to become a software developer.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('award')">Awards</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UX/UI</span><br>Designer of website interfaces</li>
+                            <li><span>Programming</span><br>C, C++, C#</li>
+                            <li><span>Sports</span><br>Basketball, Table Tennis</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>RSU Rookie Game Dev 2022</span><br>Joined the project for 5 weeks</li>
+                            <li><span>CODEKATHON</span><br>Selected to participate in the mid-level training program at CODEKATHON</li>
+                            <li><span>WORLD ROBOT OLYMPIAD 2022</span><br>Participated in the WORLD ROBOT OLYMPIAD 2022</li>
+                            <li><span>Joseph e-sport 2022</span><br>Participated in the onsite ROV game competition organized by the Student Council</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="award">
+                        <ul>
+                            <li><span>RSU Rookie Game Dev 2022</span><br>Won the championship</li>
+                            <li><span>Sports competition of the year 2563 for the province</span><br>Second place</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Primary School</span><br>LA SALLE SCHOOL BANGKOK</li>
+                            <li><span>Lower Secondary School</span><br>Joseph Upatham School</li>
+                            <li><span>Upper Secondary School</span><br>Joseph Upatham School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>  toysguru17@gmail.com</p>
+                    <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 0917504246</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/toys.guru.3"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                        <a href="https://www.instagram.com/tt_ttoys/"><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></a>
+                        <a href=""><i class="fa-brands fa-line" style="color: #ffffff;"></i></a>
+                        
+                    </div>
+                
+                </div>
+                
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
